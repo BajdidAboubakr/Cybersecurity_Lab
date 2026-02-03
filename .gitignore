@@ -1,0 +1,43 @@
+# Docker
+.env
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.tmp
+*.bak
+
+# Node modules (si jamais vous ajoutez du JS)
+node_modules/
+npm-debug.log
+
+# Python cache (si jamais vous ajoutez des scripts Python)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+
+# Archives
+*.tar.gz
+*.zip
+*.rar
+
+# Ne pas ignorer ces fichiers même s'ils sont cachés
+!.gitignore
+!.htaccess
