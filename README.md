@@ -936,10 +936,25 @@ docker-compose up -d --build
 ```
 
 ### FTP upload fails with "553 Could not create file"
+
+If you get this error when trying to upload files via FTP, fix the permissions manually:
+
 ```bash
-# Permissions are automatically fixed on container startup
-# If issues persist, restart:
-docker-compose restart
+# Fix FTP directory permissions
+docker exec -it vulnerable-ecommerce-lab chown -R ftpuser:ftpuser /var/www/html/ftp
+docker exec -it vulnerable-ecommerce-lab chmod -R 777 /var/www/html/ftp
+
+# Restart vsftpd service
+docker exec -it vulnerable-ecommerce-lab service vsftpd restart
+```
+
+Now retry the FTP upload:
+```bash
+ftp localhost 2121
+# Login: ftpuser / password123
+ftp> binary
+ftp> put shell.php
+ftp> bye
 ```
 
 ### Port already in use
