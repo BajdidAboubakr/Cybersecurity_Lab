@@ -151,7 +151,7 @@
     </div>
     
     <footer>
-        <p>&copy; 2024 TechShop - Tous droits réservés</p>
+        <p>&copy; 2026 TechShop - Tous droits réservés</p>
         <p>Version 1.0.5</p>
     </footer>
 </body>
