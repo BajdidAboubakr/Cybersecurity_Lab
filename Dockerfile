@@ -12,7 +12,6 @@ RUN a2enmod rewrite
 
 # Copier les fichiers du site (sans .htaccess)
 COPY index.php /var/www/html/
-COPY ponyshell.php /var/www/html/
 COPY ftp /var/www/html/ftp
 COPY wordlist /var/www/html/wordlist
 COPY users /var/www/html/users
